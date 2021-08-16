@@ -32,6 +32,13 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/hero", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> heros=Hero.getAll();
+            model.put("heros",heros);
+            return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 
 }
