@@ -15,7 +15,7 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads=Squad.getAll();
             model.put("squads",squads);
-            return new ModelAndView(model, "squads.hbs");
+            return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/squad", (request, response) -> { //URL to make new post on POST route
