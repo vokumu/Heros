@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
-class HeroTest {
+public class HeroTest {
 
     @BeforeEach
     void setUp() {
