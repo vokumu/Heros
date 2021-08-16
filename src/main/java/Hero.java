@@ -6,7 +6,7 @@ public class Hero {
     private String specialPower;
     private String weakness;
 
-    private static ArrayList<Squad> mInstances = new ArrayList<>();
+    private static ArrayList<Hero> mInstances = new ArrayList<>();
 
     //constructor
     public Hero(String name,int age,String specialPower,String weakness){
@@ -18,6 +18,18 @@ public class Hero {
 
     }
 
+    //get methods
+    public String getName() {
+        return name;
+    }
+    public int getAge() { return age;}
+    public String getSpecialPower(){ return specialPower;}
+    public static ArrayList<Hero> getAll() {
+        return mInstances;
+    }
+    public static void clearAllSquad(){
+        mInstances.clear();
+    }
+    }
 
 
-}
