@@ -15,10 +15,10 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads=Squad.getAll();
             model.put("squads",squads);
-            return new ModelAndView(model, "index.hbs");
+            return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/squad", (request, response) -> { //URL to make new post on POST route
+        post("/new", (request, response) -> { //URL to make new post on POST route
             Map<String, Object> model = new HashMap<String, Object>();
             String stringMaxSize = request.queryParams("maxSize");
             String name = request.queryParams("name");
