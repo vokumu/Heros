@@ -23,10 +23,11 @@ public class Hero {
     }
     public int getAge() { return age;}
     public String getSpecialPower(){ return specialPower;}
+    public String getWeakness(){ return weakness;}
     public static ArrayList<Hero> getAll() {
         return mInstances;
     }
-    public static void clearAllSquad(){
+    public static void clearAllHero(){
         mInstances.clear();
     }
     }
