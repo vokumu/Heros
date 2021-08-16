@@ -41,7 +41,7 @@ public class App {
 
     get("/addHero", (request, response) -> { //request for route happens at this location
         Map<String, Object> model = new HashMap<String, Object>(); // new model is made to store information
-        return new ModelAndView(model, "addSquads.hbs"); // assemble individual pieces and render
+        return new ModelAndView(model, "addHero.hbs"); // assemble individual pieces and render
     }, new HandlebarsTemplateEngine()); //
 
         post("/newHero", (request, response) -> { //URL to make new post on POST route
@@ -51,7 +51,7 @@ public class App {
             String weakness = request.queryParams("weakness");
             String specialPowers = request.queryParams("specialPowers");
             int age=parseInt(stringAge);
-            Squad newSquad = new Squad(name,age,,name,specialPowers,weakness);
+            Hero newHero = new Hero(name,age,specialPowers,weakness);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
