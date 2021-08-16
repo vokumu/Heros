@@ -17,6 +17,10 @@ public class App {
             model.put("squads",squads);
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/addsquads", (request, response) -> { //request for route happens at this location
+            Map<String, Object> model = new HashMap<String, Object>(); // new model is made to store information
+            return new ModelAndView(model, "addSquads.hbs"); // assemble individual pieces and render
+        }, new HandlebarsTemplateEngine()); //
 
         post("/new", (request, response) -> { //URL to make new post on POST route
             Map<String, Object> model = new HashMap<String, Object>();

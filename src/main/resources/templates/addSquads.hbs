@@ -1,0 +1,45 @@
+{{#partial "content"}}
+    <div class="container col-xxl-8 px-4 py-2">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/images/pngegg.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Add New Squad</h4>
+            </div>
+            <div class="card-body">
+                <form action="/new" method="post">
+                    <div class="form-group mt-3">
+                        <p class="card-text">Fill in the following form to add a new squad</p>
+                        <label for="name">Squad Name</label>
+                        <input id="name" name="name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="maxSize">Maximum Size</label>
+                        <input id="maxSize" name="maxSize" class="form-control" type="number">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="fightingCause">Fighting Cause</label>
+                        <input id="fightingCause" name="fightingCause" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Save Squad</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
