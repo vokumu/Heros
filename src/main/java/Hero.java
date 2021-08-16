@@ -17,7 +17,6 @@ public class Hero {
         mInstances.add(this);
 
     }
-
     //get methods
     public String getName() {
         return name;
