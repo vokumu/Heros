@@ -11,14 +11,14 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
-        get("/", (request, response) -> {
+        get("/squads", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads=Squad.getAll();
             model.put("squads",squads);
-            return new ModelAndView(model, "index.hbs");
+            return new ModelAndView(model, "squads.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/squads", (request, response) -> { //URL to make new post on POST route
+        post("/squad", (request, response) -> { //URL to make new post on POST route
             Map<String, Object> model = new HashMap<String, Object>();
             String stringMaxSize = request.queryParams("maxSize");
             String name = request.queryParams("name");
