@@ -1,6 +1,11 @@
 {{#partial "content"}}
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+    </style>
 
-    <div class="container mb-5 pb-5 mt-5">
+    <div class="container mb-5 pb-5 mt-5" >
         <h1 class="display-5">Hero list</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {{#if heros}} <!--if posts exist, then -->
@@ -11,10 +16,11 @@
                                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <rect width="100%" height="100%" fill="#55595c"></rect></svg>
                             <div class="card-body">
-                                <p class="card-text">{{name}}</p>
-                                <p class="card-text">{{age}}</p>
-                                <p class="card-text">{{specialPowers}}</p>
-                                <p class="card-text">{{weakness}}</p>
+                                <p class="card-text"><span class="bold">Name: </span>{{name}}</p>
+                                <p class="card-text"><span class="bold">Age: </span>{{age}}</p>
+                                <p class="card-text"><span class="bold">SpecialPowers: </span>{{specialPower}}</p>
+                                <p class="card-text"><span class="bold">Weakness: </span>{{weakness}}</p>
+                                <p class="card-text"><span class="bold">Squad: </span>{{msquad.name}}</p>
                             </div>
                         </div>
                     </div>

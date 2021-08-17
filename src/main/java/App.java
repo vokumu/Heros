@@ -11,13 +11,17 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
+        get("/", (request, response) -> { //request for route happens at this location
+            Map<String, Object> model = new HashMap<String, Object>(); // new model is made to store information
+            return new ModelAndView(model, "index.hbs"); // assemble individual pieces and render
+        }, new HandlebarsTemplateEngine()); //
         get("/squads", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads=Squad.getAll();
             model.put("squads",squads);
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
-        get("/addSquads", (request, response) -> { //request for route happens at this location
+        get("/squads/new", (request, response) -> { //request for route happens at this location
             Map<String, Object> model = new HashMap<String, Object>(); // new model is made to store information
             return new ModelAndView(model, "addSquads.hbs"); // assemble individual pieces and render
         }, new HandlebarsTemplateEngine()); //
@@ -32,14 +36,15 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/hero", (request, response) -> {
+        get("/heros", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Hero> heros=Hero.getAll();
+            ArrayList<Squad> squads=Squad.getAll();
             model.put("heros",heros);
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
 
-    get("/addHero", (request, response) -> { //request for route happens at this location
+    get("/heros/new", (request, response) -> { //request for route happens at this location
         Map<String, Object> model = new HashMap<String, Object>(); // new model is made to store information
         ArrayList<Squad> squads=Squad.getAll();
         model.put("squads",squads);
