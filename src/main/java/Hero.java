@@ -38,6 +38,9 @@ public class Hero {
     public int getId() {
         return id;
     }
+    public static Hero findById(int id){
+        return mInstances.get(id-1); //why minus 1? See if you can figure it out.
+    }
     }
 
 

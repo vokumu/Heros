@@ -53,10 +53,10 @@ public class App {
             String stringAge = request.queryParams("age");
             String weakness = request.queryParams("weakness");
             String specialPowers = request.queryParams("specialPowers");
-            String squad = request.queryParams("squad");
-            //Squad newSquad=Squad.getName()
+            int squadId = parseInt(request.queryParams("squadId"));
+            Squad newSquad=Squad.findById(squadId);
             int age=parseInt(stringAge);
-           /* Hero newHero = new Hero(name,age,specialPowers,weakness);*/
+            Hero newHero = new Hero(name,age,specialPowers,weakness,newSquad);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 

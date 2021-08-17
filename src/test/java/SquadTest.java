@@ -55,4 +55,20 @@ public class SquadTest {
         assertTrue(Squad.getAll().contains(squad));
         assertTrue(Squad.getAll().contains(otherSquad));
     }
+    public void getId_SquadInstantiateWithAnID_1() throws Exception{
+        Squad.clearAllSquad();  // Remember, the test will fail without this line! We need to empty leftover Posts from previous tests!
+        Squad testSquad=new Squad(3,"pingPong","wierdness");
+        assertEquals(1, testSquad.getId());
+    }
+    @Test
+    public void findReturnsCorrectPost() throws Exception {
+        Squad testSquad=new Squad(3,"pingPong","wierdness");
+        assertEquals(1, Squad.findById(testSquad.getId()).getId());
+    }
+
+    @Test
+    public void findReturnsCorrectPostWhenMoreThanOneSquadExists() throws Exception {
+        Squad testSquad=new Squad(3,"pingPong","wierdness");
+        assertEquals(1, Squad.findById(testSquad.getId()).getId());
+    }
 }

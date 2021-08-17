@@ -77,5 +77,19 @@ public class HeroTest {
         Hero hero = new Hero("victoria",22,"eating","sleeping",testSquad);
         assertEquals(1, hero.getId());
     }
+    @Test
+    public void findReturnsCorrectPost() throws Exception {
+        Squad testSquad=new Squad(3,"pingPong","wierdness");
+        Hero hero = new Hero("victoria",22,"eating","sleeping",testSquad);
+        assertEquals(1, Hero.findById(hero.getId()).getId());
+    }
+
+    @Test
+    public void findReturnsCorrectPostWhenMoreThanOnePostExists() throws Exception {
+        Squad testSquad=new Squad(3,"pingPong","wierdness");
+        Hero hero = new Hero("victoria",22,"eating","sleeping",testSquad);
+        Hero otherHero = new Hero("victoria",22,"eating","sleeping",testSquad);
+        assertEquals(1, Hero.findById(hero.getId()).getId());
+    }
 
 }

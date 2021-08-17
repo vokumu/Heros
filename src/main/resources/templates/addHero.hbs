@@ -25,13 +25,13 @@
                     </div>
                     <div class="form-group mt-3">
                         <label for="squad">Squad</label>
-                        <select class="form-control" id="squad" name="squad">
+                        <select class="form-control" id="squad" name="squadId" required>
                             {{#if squads}} <!--if posts exist, then -->
                                 {{#each squads}} <!--loop-->
-                                    <option>{{name}} </option>
+                                    <option value="{{id}}">{{name}}</option>
                                 {{/each}}
                             {{else}} <!--no posts!-->
-                                <option>no squad</option>
+                                <option value="">No squad added yet</option>
                             {{/if}}
                         </select>
                     </div>
