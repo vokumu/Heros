@@ -24,6 +24,18 @@
                         <input id="weakness" name="weakness" class="form-control" type="text">
                     </div>
                     <div class="form-group mt-3">
+                        <label for="squad">Squad</label>
+                        <select class="form-control" id="squad" name="squad">
+                            {{#if squads}} <!--if posts exist, then -->
+                                {{#each squads}} <!--loop-->
+                                    <option>{{name}} </option>
+                                {{/each}}
+                            {{else}} <!--no posts!-->
+                                <option>no squad</option>
+                            {{/if}}
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Save Hero</button>
                     </div>
                 </form>

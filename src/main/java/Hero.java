@@ -5,16 +5,20 @@ public class Hero {
     private int age;
     private String specialPower;
     private String weakness;
+    private Squad msquad;
+    private int id;
 
     private static ArrayList<Hero> mInstances = new ArrayList<>();
 
     //constructor
-    public Hero(String name,int age,String specialPower,String weakness){
+    public Hero(String name,int age,String specialPower,String weakness,Squad squad){
         this.name=name;
         this.age=age;
         this.specialPower=specialPower;
         this.weakness=weakness;
         mInstances.add(this);
+        msquad=squad;
+        this.id = mInstances.size();
 
     }
     //get methods
@@ -24,12 +28,17 @@ public class Hero {
     public int getAge() { return age;}
     public String getSpecialPower(){ return specialPower;}
     public String getWeakness(){ return weakness;}
+    public Squad getMsquad(){ return msquad;}
     public static ArrayList<Hero> getAll() {
         return mInstances;
     }
     public static void clearAllHero(){
         mInstances.clear();
     }
+    public int getId() {
+        return id;
     }
+    }
+
 
 
