@@ -1,0 +1,31 @@
+{{#partial "content"}}
+    <div class="container mt-5 mb-5">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Add New Squad</h4>
+            </div>
+            <div class="card-body">
+                <form action="/new" method="post">
+                    <div class="form-group mt-3">
+                        <p class="card-text">Fill in the following form to add a new squad</p>
+                        <label for="name">Squad Name</label>
+                        <input id="name" name="name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="maxSize">Maximum Size</label>
+                        <input id="maxSize" name="maxSize" class="form-control" type="number">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="fightingCause">Fighting Cause</label>
+                        <input id="fightingCause" name="fightingCause" class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Save Squad</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

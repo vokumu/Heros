@@ -1,0 +1,70 @@
+{{#block "header"}}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Fonts to support Material Design -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <!-- Icons to support Material Design -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    </head>
+    <body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <h2><span>Hero</span>Squad</h2>
+            </a>
+
+            <div class="col-md-5 text-end">
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+                    <li><a href="/heros" class="nav-link px-2 link-dark">Heros</a></li>
+                    <li><a href="/heros/new" class="nav-link px-2 link-dark">Add Hero</a></li>
+                    <li><a href="/squads" class="nav-link px-2 link-dark">Squads</a></li>
+                    <li><a href="/squads/new" class="nav-link px-2 link-dark">Add Squad</a></li>
+                </ul>
+            </div>
+        </header>
+
+    </div>
+    <div style="background-color: beige">
+    <div class="container col-xxl-8 px-4 py-2 pb-3 pt-3" style="background-color: beige">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/images/pngegg.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
+                <p class="lead">Hero Squad is a simple app that allows you to Create a super Hero of form give their details including their name,age,weakness and strength.
+                   it also gives you a chance to create a Squad of superhero and allow it to have members .</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{{/block}}
+<!-- begin inner template-->
+<div>
+    {{#block "content"}}
+    {{/block}}
+
+</div>
+<!-- end inner template-->
+{{#block "footer"}}
+    <footer class="pt-3 mt-4 text-muted border-top navbar-dark pb-3" style="background-color: #000">
+        <div class="container">
+            © 2021
+
+            <br/>
+        </div>
+    </footer>
+
+{{/block}}
+</body>
+</html>
