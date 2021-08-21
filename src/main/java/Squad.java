@@ -24,6 +24,9 @@ public class Squad {
     public static ArrayList<Squad> getAll() {
         return instances;
     }
+    public static ArrayList<Squad> getSquadInstances() {
+        return instances;
+    }
     public static void clearAllSquad(){
         instances.clear();
     }

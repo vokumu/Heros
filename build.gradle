@@ -1,12 +1,12 @@
+
 plugins {
     id 'java'
     id 'application'
 }
 
-group 'org.example'
+group 'com.hero-squad-app'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'App'
 sourceCompatibility = 1.8
 
 repositories {
@@ -14,10 +14,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'junit:junit:4.13.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation "com.sparkjava:spark-core:2.6.0"
-    implementation "com.sparkjava:spark-template-handlebars:2.5.5"
-    implementation 'org.slf4j:slf4j-simple:1.7.21'
+    implementation group: 'junit', name: 'junit', version: '4.13.2'
+    implementation"com.sparkjava:spark-core:2.9.3"
+    implementation "com.sparkjava:spark-template-handlebars:2.7.1"
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+    testImplementation'org.junit.jupiter:junit-jupiter-api:5.7.2'
 }

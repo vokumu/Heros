@@ -42,10 +42,10 @@ public class SquadTest {
     }
 
     @Test
-    public void AllSqaudAreCorrectlyReturned_true() {
+    public void AllSquadAreCorrectlyReturned_true() {
         Squad squad = new Squad(2,"abc","Intro");
         Squad otherSquad = new Squad(3,"xyz","Easting");
-        assertEquals(2, Squad.getAll().size());
+        assertEquals(2, Squad.getSquadInstances().size());
     }
 
     @Test
